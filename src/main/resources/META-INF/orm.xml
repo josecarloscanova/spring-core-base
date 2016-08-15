@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entity-mappings version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
+<entity-mappings version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
 	<persistence-unit-metadata>
 		<persistence-unit-defaults>
 			<access>FIELD</access>
 		</persistence-unit-defaults>
 	</persistence-unit-metadata>
+	<mapped-superclass class="org.nanotek.LongBase"
+		access="FIELD">
+		<attributes>
+			<id name="id">
+				<generated-value strategy="IDENTITY" />
+			</id>
+		</attributes>
+	</mapped-superclass>
+	<!-- id and name mapped in superclass ORM -->
+
+	<entity class="org.nanotek.beans.Artist"
+		access="FIELD">
+		<table name="artist" />
+		<attributes>
+			<basic name="name">
+				<column length="500" />
+			</basic>
+			<basic name="sortname">
+				<column length="500" />
+			</basic>
+			<basic name="hashkey">
+				<column length="30" />
+			</basic>			
+		</attributes>
+	</entity>
+
 </entity-mappings>

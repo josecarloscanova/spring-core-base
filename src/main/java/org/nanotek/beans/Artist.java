@@ -1,20 +1,15 @@
 package org.nanotek.beans;
 
 import org.nanotek.Base;
+import org.nanotek.LongBase;
 
 @SuppressWarnings("serial")
-public class Artist implements Base<Long> {
+public class Artist extends LongBase {
 
-	private Long id; 
 	private String name;
 	private String sortName;
 
 	public Artist() {
-	}
-
-	@Override
-	public Long getId() {
-		return id;
 	}
 
 	public String getName() {
@@ -23,10 +18,6 @@ public class Artist implements Base<Long> {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getSortName() {

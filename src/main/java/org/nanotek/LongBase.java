@@ -1,7 +1,16 @@
 package org.nanotek;
 
-import javax.persistence.MappedSuperclass;
+@SuppressWarnings("serial")
+public abstract class LongBase implements Base<Long>{
+	private Long id;
 
-@MappedSuperclass
-public interface LongBase extends Base<Long>{
+	public LongBase(){}
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	} 
 }
