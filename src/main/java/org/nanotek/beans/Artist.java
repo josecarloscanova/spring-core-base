@@ -1,6 +1,5 @@
 package org.nanotek.beans;
 
-import org.nanotek.Base;
 import org.nanotek.LongBase;
 
 @SuppressWarnings("serial")

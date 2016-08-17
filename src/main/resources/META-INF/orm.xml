@@ -24,7 +24,7 @@
 			<basic name="name">
 				<column length="500" />
 			</basic>
-			<basic name="sortname">
+			<basic name="sortName">
 				<column length="500" />
 			</basic>
 			<basic name="hashkey">
